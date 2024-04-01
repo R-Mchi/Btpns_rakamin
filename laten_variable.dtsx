@@ -1,0 +1,1105 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/30/2024 12:26:23 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-KUL9CPH"
+  DTS:CreatorName="DESKTOP-KUL9CPH\hanse"
+  DTS:DTSID="{4E6313E4-AAE6-43E7-B8EA-64D1F9C7DCF7}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5397.1"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="laten_variable"
+  DTS:PackageType="5"
+  DTS:VersionBuild="50"
+  DTS:VersionGUID="{69C000B6-FD42-4D44-960E-6F492F7CA79C}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-KUL9CPH.btpns_rakamin]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{765A0503-F1C1-410D-B408-6F3DF9F367F5}"
+      DTS:ObjectName="DESKTOP-KUL9CPH.btpns_rakamin">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-KUL9CPH;Initial Catalog=btpns_rakamin;Provider=SQLNCLIRDA11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{765A0503-F1C1-410D-B408-6F3DF9F367F5}DESKTOP-KUL9CPH.btpns_rakamin;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-KUL9CPH.btpns_rakamin 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{29007CC3-DF43-479C-BD07-FB666ADDC1EE}"
+      DTS:ObjectName="DESKTOP-KUL9CPH.btpns_rakamin 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-KUL9CPH;Initial Catalog=btpns_rakamin;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package-{29007CC3-DF43-479C-BD07-FB666ADDC1EE}DESKTOP-KUL9CPH.btpns_rakamin 1;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{2E3A50F7-D6AB-4CF9-A86E-FBCFD0B27BAA}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\Users\hanse\Downloads\btpn_db\laten_db.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{26FDE0BA-6A23-45DE-9A20-B30F6106A00C}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="Laten_db.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CLIENTNUM"
+              DTS:DTSID="{38619078-D63D-40EE-80BB-825E4B5BD995}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="idstatus"
+              DTS:DTSID="{5DA20DE4-42FB-41BE-9A53-FAFF57A84099}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Months_Inactive_12_mon"
+              DTS:DTSID="{02E2D350-B726-45CF-ADB8-F218441028D2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Contacts_Count_12_mon"
+              DTS:DTSID="{6DA35E61-9AAF-411E-A1ED-C7434A722DF9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total_Trans_Amt"
+              DTS:DTSID="{6AE00E17-22A0-40E3-879E-A0C74FE4901A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total_Trans_Ct"
+              DTS:DTSID="{6ABD227A-58F8-442C-A45D-46B8F9389C84}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Avg_Utilization_Ratio"
+              DTS:DTSID="{C511BF9F-7241-485D-AC34-2536CE341555}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{8EB27E62-D467-404D-8BEE-62D3B9B206EB}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Database_Btpns"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Database_Btpns"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[customer_data_history]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Database_Btpns.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-KUL9CPH.btpns_rakamin 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-KUL9CPH.btpns_rakamin 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[column1]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[column1]"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[column1]"
+                      name="column1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[CLIENTNUM]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[CLIENTNUM]"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[CLIENTNUM]"
+                      name="CLIENTNUM"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[idstatus]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[idstatus]"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[idstatus]"
+                      name="idstatus"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Customer_Age]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[Customer_Age]"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Customer_Age]"
+                      name="Customer_Age"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Gender]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[Gender]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Gender]"
+                      name="Gender"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Dependent_count]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[Dependent_count]"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Dependent_count]"
+                      name="Dependent_count"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Educationid]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[Educationid]"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Educationid]"
+                      name="Educationid"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Maritalid]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[Maritalid]"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Maritalid]"
+                      name="Maritalid"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Income_Category]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[Income_Category]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Income_Category]"
+                      name="Income_Category"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[card_categoryid]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[card_categoryid]"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[card_categoryid]"
+                      name="card_categoryid"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Months_on_book]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[Months_on_book]"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Months_on_book]"
+                      name="Months_on_book"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Total_Relationship_Count]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[Total_Relationship_Count]"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Total_Relationship_Count]"
+                      name="Total_Relationship_Count"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Months_Inactive_12_mon]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[Months_Inactive_12_mon]"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Months_Inactive_12_mon]"
+                      name="Months_Inactive_12_mon"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Contacts_Count_12_mon]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[Contacts_Count_12_mon]"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Contacts_Count_12_mon]"
+                      name="Contacts_Count_12_mon"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Credit_Limit]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[Credit_Limit]"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Credit_Limit]"
+                      name="Credit_Limit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Total_Revolving_Bal]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[Total_Revolving_Bal]"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Total_Revolving_Bal]"
+                      name="Total_Revolving_Bal"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Avg_Open_To_Buy]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[Avg_Open_To_Buy]"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Avg_Open_To_Buy]"
+                      name="Avg_Open_To_Buy"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Total_Trans_Amt]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[Total_Trans_Amt]"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Total_Trans_Amt]"
+                      name="Total_Trans_Amt"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Total_Trans_Ct]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[Total_Trans_Ct]"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Total_Trans_Ct]"
+                      name="Total_Trans_Ct"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Avg_Utilization_Ratio]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[Avg_Utilization_Ratio]"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Avg_Utilization_Ratio]"
+                      name="Avg_Utilization_Ratio"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[column1]"
+                      dataType="i2"
+                      name="column1" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[CLIENTNUM]"
+                      dataType="i4"
+                      name="CLIENTNUM" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[idstatus]"
+                      dataType="i4"
+                      name="idstatus" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[Customer_Age]"
+                      dataType="ui1"
+                      name="Customer_Age" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[Gender]"
+                      dataType="wstr"
+                      length="50"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[Dependent_count]"
+                      dataType="ui1"
+                      name="Dependent_count" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[Educationid]"
+                      dataType="i4"
+                      name="Educationid" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[Maritalid]"
+                      dataType="i4"
+                      name="Maritalid" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[Income_Category]"
+                      dataType="wstr"
+                      length="50"
+                      name="Income_Category" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[card_categoryid]"
+                      dataType="i4"
+                      name="card_categoryid" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[Months_on_book]"
+                      dataType="ui1"
+                      name="Months_on_book" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[Total_Relationship_Count]"
+                      dataType="ui1"
+                      name="Total_Relationship_Count" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[Months_Inactive_12_mon]"
+                      dataType="ui1"
+                      name="Months_Inactive_12_mon" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[Contacts_Count_12_mon]"
+                      dataType="ui1"
+                      name="Contacts_Count_12_mon" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[Credit_Limit]"
+                      dataType="r8"
+                      name="Credit_Limit" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[Total_Revolving_Bal]"
+                      dataType="i4"
+                      name="Total_Revolving_Bal" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[Avg_Open_To_Buy]"
+                      dataType="r8"
+                      name="Avg_Open_To_Buy" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[Total_Trans_Amt]"
+                      dataType="i4"
+                      name="Total_Trans_Amt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[Total_Trans_Ct]"
+                      dataType="ui1"
+                      name="Total_Trans_Ct" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].ExternalColumns[Avg_Utilization_Ratio]"
+                      dataType="r8"
+                      name="Avg_Utilization_Ratio" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[column1]"
+                      dataType="i2"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[column1]"
+                      name="column1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[CLIENTNUM]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[CLIENTNUM]"
+                      name="CLIENTNUM" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[idstatus]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[idstatus]"
+                      name="idstatus" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[Customer_Age]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[Customer_Age]"
+                      name="Customer_Age" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[Gender]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[Gender]"
+                      name="Gender" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[Dependent_count]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[Dependent_count]"
+                      name="Dependent_count" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[Educationid]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[Educationid]"
+                      name="Educationid" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[Maritalid]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[Maritalid]"
+                      name="Maritalid" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[Income_Category]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[Income_Category]"
+                      name="Income_Category" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[card_categoryid]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[card_categoryid]"
+                      name="card_categoryid" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[Months_on_book]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[Months_on_book]"
+                      name="Months_on_book" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[Total_Relationship_Count]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[Total_Relationship_Count]"
+                      name="Total_Relationship_Count" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[Months_Inactive_12_mon]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[Months_Inactive_12_mon]"
+                      name="Months_Inactive_12_mon" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[Contacts_Count_12_mon]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[Contacts_Count_12_mon]"
+                      name="Contacts_Count_12_mon" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[Credit_Limit]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[Credit_Limit]"
+                      name="Credit_Limit" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[Total_Revolving_Bal]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[Total_Revolving_Bal]"
+                      name="Total_Revolving_Bal" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[Avg_Open_To_Buy]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[Avg_Open_To_Buy]"
+                      name="Avg_Open_To_Buy" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[Total_Trans_Amt]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[Total_Trans_Amt]"
+                      name="Total_Trans_Amt" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[Total_Trans_Ct]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[Total_Trans_Ct]"
+                      name="Total_Trans_Ct" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[Avg_Utilization_Ratio]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[Avg_Utilization_Ratio]"
+                      name="Avg_Utilization_Ratio" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Database_Btpns 1"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Database_Btpns 1"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Laten_db]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Database_Btpns 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-KUL9CPH.btpns_rakamin 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-KUL9CPH.btpns_rakamin 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Database_Btpns 1.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Database_Btpns 1.Inputs[OLE DB Destination Input].ExternalColumns[CLIENTNUM]"
+                      dataType="i4"
+                      name="CLIENTNUM" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Database_Btpns 1.Inputs[OLE DB Destination Input].ExternalColumns[idstatus]"
+                      dataType="i4"
+                      name="idstatus" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Database_Btpns 1.Inputs[OLE DB Destination Input].ExternalColumns[Months_Inactive_12_mon]"
+                      dataType="ui1"
+                      name="Months_Inactive_12_mon" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Database_Btpns 1.Inputs[OLE DB Destination Input].ExternalColumns[Contacts_Count_12_mon]"
+                      dataType="ui1"
+                      name="Contacts_Count_12_mon" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Database_Btpns 1.Inputs[OLE DB Destination Input].ExternalColumns[Total_Trans_Amt]"
+                      dataType="i4"
+                      name="Total_Trans_Amt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Database_Btpns 1.Inputs[OLE DB Destination Input].ExternalColumns[Total_Trans_Ct]"
+                      dataType="ui1"
+                      name="Total_Trans_Ct" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Database_Btpns 1.Inputs[OLE DB Destination Input].ExternalColumns[Avg_Utilization_Ratio]"
+                      dataType="r8"
+                      name="Avg_Utilization_Ratio" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Database_Btpns 1.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\Database_Btpns 1.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Database_Btpns 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Database_Btpns 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Database_Btpns 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Laten_Variable"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Laten_Variable"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Laten_Variable.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Laten_Variable.Inputs[Sort Input].Columns[CLIENTNUM]"
+                      cachedDataType="i4"
+                      cachedName="CLIENTNUM"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[CLIENTNUM]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Laten_Variable.Inputs[Sort Input].Columns[idstatus]"
+                      cachedDataType="i4"
+                      cachedName="idstatus"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[idstatus]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Laten_Variable.Inputs[Sort Input].Columns[Months_Inactive_12_mon]"
+                      cachedDataType="ui1"
+                      cachedName="Months_Inactive_12_mon"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Months_Inactive_12_mon]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">7</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Laten_Variable.Inputs[Sort Input].Columns[Contacts_Count_12_mon]"
+                      cachedDataType="ui1"
+                      cachedName="Contacts_Count_12_mon"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Contacts_Count_12_mon]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">3</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Laten_Variable.Inputs[Sort Input].Columns[Total_Trans_Amt]"
+                      cachedDataType="i4"
+                      cachedName="Total_Trans_Amt"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Total_Trans_Amt]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">4</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Laten_Variable.Inputs[Sort Input].Columns[Total_Trans_Ct]"
+                      cachedDataType="ui1"
+                      cachedName="Total_Trans_Ct"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Total_Trans_Ct]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">5</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Laten_Variable.Inputs[Sort Input].Columns[Avg_Utilization_Ratio]"
+                      cachedDataType="r8"
+                      cachedName="Avg_Utilization_Ratio"
+                      lineageId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Avg_Utilization_Ratio]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">6</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Laten_Variable.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Laten_Variable.Outputs[Sort Output].Columns[CLIENTNUM]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Laten_Variable.Outputs[Sort Output].Columns[CLIENTNUM]"
+                      name="CLIENTNUM"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[CLIENTNUM]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Laten_Variable.Outputs[Sort Output].Columns[idstatus]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Laten_Variable.Outputs[Sort Output].Columns[idstatus]"
+                      name="idstatus"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[idstatus]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Laten_Variable.Outputs[Sort Output].Columns[Months_Inactive_12_mon]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task\Laten_Variable.Outputs[Sort Output].Columns[Months_Inactive_12_mon]"
+                      name="Months_Inactive_12_mon"
+                      sortKeyPosition="7">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Months_Inactive_12_mon]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Laten_Variable.Outputs[Sort Output].Columns[Contacts_Count_12_mon]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task\Laten_Variable.Outputs[Sort Output].Columns[Contacts_Count_12_mon]"
+                      name="Contacts_Count_12_mon"
+                      sortKeyPosition="3">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Contacts_Count_12_mon]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Laten_Variable.Outputs[Sort Output].Columns[Total_Trans_Amt]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Laten_Variable.Outputs[Sort Output].Columns[Total_Trans_Amt]"
+                      name="Total_Trans_Amt"
+                      sortKeyPosition="4">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Total_Trans_Amt]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Laten_Variable.Outputs[Sort Output].Columns[Total_Trans_Ct]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task\Laten_Variable.Outputs[Sort Output].Columns[Total_Trans_Ct]"
+                      name="Total_Trans_Ct"
+                      sortKeyPosition="5">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Total_Trans_Ct]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Laten_Variable.Outputs[Sort Output].Columns[Avg_Utilization_Ratio]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Laten_Variable.Outputs[Sort Output].Columns[Avg_Utilization_Ratio]"
+                      name="Avg_Utilization_Ratio"
+                      sortKeyPosition="6">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output].Columns[Avg_Utilization_Ratio]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task\Laten_Variable.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\Database_Btpns.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Sort Output]"
+              endId="Package\Data Flow Task\Database_Btpns 1.Inputs[OLE DB Destination Input]"
+              name="Sort Output"
+              startId="Package\Data Flow Task\Laten_Variable.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Data Flow Task"
+          TopLeft="140.166666666667,35.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="153,42"
+          Id="Package\Data Flow Task\Laten_Variable"
+          TopLeft="154.111111111111,170.222222222222" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Data Flow Task\Database_Btpns"
+          TopLeft="154.166666666667,94.6111111111111" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="232.388888888889,136.611111111111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33.6111111111109"
+              Start="0,0"
+              End="0,26.1111111111109">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.1111111111109" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="169,42"
+          Id="Package\Data Flow Task\Database_Btpns 1"
+          TopLeft="346,172" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Sort Output]"
+          TopLeft="307.111111111111,192.111111111111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="38.888888888889,0"
+              Start="0,0"
+              End="31.388888888889,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="31.388888888889,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Database_Btpns">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Database_Btpns 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
